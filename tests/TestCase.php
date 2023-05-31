@@ -1,11 +1,11 @@
 <?php
 
-namespace Laracsv;
+namespace Bogddan;
 
 use Illuminate\Database\Capsule\Manager as Capsule;
 use Illuminate\Database\Schema\Blueprint;
-use Laracsv\Models\Category;
-use Laracsv\Models\Product;
+use Bogddan\Models\Category;
+use Bogddan\Models\Product;
 use PHPUnit\Framework\TestCase as PhpunitTestCase;
 
 class TestCase extends PhpunitTestCase

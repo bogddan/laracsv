@@ -1,6 +1,6 @@
 <?php
 
-namespace Laracsv\Models;
+namespace Bogddan\Models;
 
 use Illuminate\Database\Eloquent\Model;
 

@@ -1,16 +1,16 @@
-# LaraCSV
+# Bogddan
 
 A Laravel package to easily generate CSV files from Eloquent model.
 
-[![Build Status](https://travis-ci.org/usmanhalalit/laracsv.svg?branch=master)](https://travis-ci.org/usmanhalalit/laracsv)
-[![Total Downloads](https://poser.pugx.org/usmanhalalit/laracsv/downloads)](https://packagist.org/packages/usmanhalalit/laracsv)
-[![Daily Downloads](https://poser.pugx.org/usmanhalalit/laracsv/d/daily)](https://packagist.org/packages/usmanhalalit/laracsv)
+[![Build Status](https://travis-ci.org/usmanhalalit/Bogddan.svg?branch=master)](https://travis-ci.org/usmanhalalit/Bogddan)
+[![Total Downloads](https://poser.pugx.org/usmanhalalit/Bogddan/downloads)](https://packagist.org/packages/usmanhalalit/Bogddan)
+[![Daily Downloads](https://poser.pugx.org/usmanhalalit/Bogddan/d/daily)](https://packagist.org/packages/usmanhalalit/Bogddan)
 
 ## Basic usage
 
 ```php
 $users = User::get(); // All users
-$csvExporter = new \Laracsv\Export();
+$csvExporter = new \Bogddan\Export();
 $csvExporter->build($users, ['email', 'name'])->download();
 ```
 
@@ -21,7 +21,7 @@ And a proper CSV file will be downloaded with `email` and `name` fields. As simp
 Just run this on your terminal:
 
 ```
-composer require usmanhalalit/laracsv:^2.1
+composer require usmanhalalit/Bogddan:^2.1
 ```
 and you should be good to go.
 
@@ -64,7 +64,7 @@ If no filename is given a filename with date-time will be generated.
 
 #### Advanced Outputs
 
-LaraCSV uses [League CSV](http://csv.thephpleague.com/). You can do what League CSV
+Bogddan uses [League CSV](http://csv.thephpleague.com/). You can do what League CSV
 is able to do. You can get the underlying League CSV writer and reader instance by calling:
 
 ```php
@@ -107,7 +107,7 @@ $csvExporter->build(User::get(), ['email', 'name', 'created_at'], [
 There is a hook which is triggered before processing a database row.
   For example, if you want to change the date format you can do so.
 ```php
-$csvExporter = new \Laracsv\Export();
+$csvExporter = new \Bogddan\Export();
 $users = User::get();
 
 // Register the hook before building
@@ -150,7 +150,7 @@ You may also tinker relation things as you wish with hooks:
 ```php
 $products = Product::with('categories')->where('order_count', '>', 10)->orderBy('order_count', 'desc')->get();
 $fields = ['id', 'title','original_price' => 'Market Price', 'category_ids',];
-$csvExporter = new \Laracsv\Export();
+$csvExporter = new \Bogddan\Export();
 $csvExporter->beforeEach(function ($product) {
     $product->category_ids = implode(', ', $product->categories->pluck('id')->toArray());
 });

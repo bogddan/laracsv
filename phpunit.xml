@@ -10,8 +10,8 @@
          processIsolation="false"
          stopOnFailure="false">
     <testsuites>
-        <testsuite name="LaraCSV Test Suite">
-            <directory>tests/Laracsv/</directory>
+        <testsuite name="Bogddan Test Suite">
+            <directory>tests/Bogddan/</directory>
         </testsuite>
     </testsuites>
 

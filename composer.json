@@ -1,7 +1,7 @@
 {
-    "name": "usmanhalalit/laracsv",
+    "name": "bogddan/Bogddan",
     "description": "A Laravel package to easily generate CSV files from Eloquent model.",
-    "homepage": "https://github.com/usmanhalalit/laracsv",
+    "homepage": "https://github.com/usmanhalalit/Bogddan",
     "keywords": ["laravel", "csv", "eloquent", "export"],
     "license": "MIT",
     "authors":
@@ -26,13 +26,13 @@
 
     "autoload":	{
         "psr-4": {
-            "Laracsv\\": "src/Laracsv/"
+            "Bogddan\\": "src/Bogddan/"
         }
     },
 
     "autoload-dev": {
         "psr-4": {
-            "Laracsv\\": "tests/Laracsv/"
+            "Bogddan\\": "tests/Bogddan/"
         },
 
         "classmap": [

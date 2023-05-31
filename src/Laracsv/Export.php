@@ -1,6 +1,6 @@
 <?php
 
-namespace Laracsv;
+namespace Bogddan;
 
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Support\Arr;

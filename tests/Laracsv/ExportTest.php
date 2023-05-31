@@ -1,9 +1,9 @@
 <?php
 
-namespace Laracsv;
+namespace Bogddan;
 
-use Laracsv\Models\Category;
-use Laracsv\Models\Product;
+use Bogddan\Models\Category;
+use Bogddan\Models\Product;
 use League\Csv\Writer;
 use stdClass;
 
