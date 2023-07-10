@@ -106,6 +106,7 @@ $csvExporter->build(User::get(), ['email', 'name', 'created_at'], [
 
 There is a hook which is triggered before processing a database row.
   For example, if you want to change the date format you can do so.
+
 ```php
 $csvExporter = new \Bogddan\Export();
 $users = User::get();

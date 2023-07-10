@@ -1,42 +1,41 @@
 {
-    "name": "bogddan/laracsv",
-    "description": "A Laravel package to easily generate CSV files from Eloquent model.",
-    "homepage": "https://github.com/usmanhalalit/Bogddan",
-    "keywords": ["laravel", "csv", "eloquent", "export"],
-    "license": "MIT",
-    "authors":
-    [
-        {
-            "name": "Muhammad Usman",
-            "email": "hi@usman.it",
-            "role": "Developer"
-        }
-    ],
-
-    "require": {
-        "php": "^8.2",
-        "illuminate/database": "^10.0",
-        "league/csv": "^9.0"
-    },
-
-    "require-dev": {
-        "fakerphp/faker": "^1.22",
-        "phpunit/phpunit": "^10.0"
-    },
-
-    "autoload":	{
-        "psr-4": {
-            "Bogddan\\": "src/Bogddan/"
-        }
-    },
-
-    "autoload-dev": {
-        "psr-4": {
-            "Bogddan\\": "tests/Bogddan/"
-        },
-
-        "classmap": [
-            "tests/TestCase.php"
-        ]
+  "name": "bogddan/laracsv",
+  "description": "A Laravel package to easily generate CSV files from Eloquent model.",
+  "homepage": "https://github.com/bogddan/laracsv",
+  "keywords": [
+    "laravel",
+    "csv",
+    "eloquent",
+    "export"
+  ],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Muhammad Usman",
+      "email": "hi@usman.it",
+      "role": "Developer"
     }
+  ],
+  "require": {
+    "php": "^8.2",
+    "illuminate/database": "^10.0",
+    "league/csv": "^9.9"
+  },
+  "require-dev": {
+    "fakerphp/faker": "^1.22",
+    "phpunit/phpunit": "^10.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Bogddan\\Laracsv\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Bogddan\\": "tests/Laracsv/"
+    },
+    "classmap": [
+      "tests/TestCase.php"
+    ]
+  }
 }

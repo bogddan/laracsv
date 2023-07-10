@@ -1,6 +1,6 @@
 <?php
 
-namespace Bogddan;
+namespace Bogddan\Laracsv\Laracsv;
 
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Support\Arr;

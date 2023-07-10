@@ -1,6 +1,6 @@
 <?php
 
-namespace Bogddan;
+namespace Laracsv;
 
 use Illuminate\Database\Capsule\Manager as Capsule;
 use Illuminate\Database\Schema\Blueprint;
@@ -10,9 +10,9 @@ use PHPUnit\Framework\TestCase as PhpunitTestCase;
 
 class TestCase extends PhpunitTestCase
 {
-    public function setUp()
+    public function setUp(): void
     {
-        $capsule = new Capsule;
+        $capsule = new Capsule();
 
         $capsule->addConnection(array(
             'driver' => 'sqlite',
@@ -23,10 +23,6 @@ class TestCase extends PhpunitTestCase
 
         $this->createTables(Capsule::schema());
         $this->seedData();
-    }
-
-    public function tearDown()
-    {
     }
 
     private function createTables($schema)

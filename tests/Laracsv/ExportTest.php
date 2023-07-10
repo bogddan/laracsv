@@ -1,6 +1,6 @@
 <?php
 
-namespace Bogddan;
+namespace Laracsv;
 
 use Bogddan\Models\Category;
 use Bogddan\Models\Product;

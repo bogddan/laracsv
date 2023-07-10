@@ -11,7 +11,7 @@
          stopOnFailure="false">
     <testsuites>
         <testsuite name="Bogddan Test Suite">
-            <directory>tests/Bogddan/</directory>
+            <directory>tests/Laracsv/</directory>
         </testsuite>
     </testsuites>
 
