@@ -1,6 +1,6 @@
 <?php
 
-namespace Bogddan\Laracsv\Laracsv;
+namespace Bogddan\Laracsv;
 
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Support\Arr;
@@ -13,57 +13,39 @@ class Export
 {
     /**
      * The default chunk size when looping through the builder results.
-     *
-     * @var int
      */
     private const DEFAULT_CHUNK_SIZE = 1000;
 
     /**
      * The applied callback.
-     *
-     * @var callable|null
      */
     protected $beforeEachCallback;
 
     /**
      * The callback applied before handling each chunk.
-     *
-     * @var callable|null
      */
     protected $beforeEachChunkCallback;
 
     /**
      * The CSV writer.
-     *
-     * @var \League\Csv\Writer
      */
     protected $writer;
 
     /**
      * Export configuration.
-     *
-     * @var array
      */
     protected $config = [];
 
     /**
      * Export constructor.
-     *
-     * @param \League\Csv\Writer|null $writer
      */
     public function __construct(Writer $writer = null)
     {
-        $this->writer = $writer ?: Writer::createFromFileObject(new SplTempFileObject);
+        $this->writer = $writer ?: Writer::createFromFileObject(new SplTempFileObject());
     }
 
     /**
      * Build the writer.
-     *
-     * @param \Illuminate\Support\Collection $collection
-     * @param array $fields
-     * @param array $config
-     * @return $this
-     * @throws \League\Csv\CannotInsertRecord
      */
     public function build($collection, array $fields, array $config = []): self
     {
@@ -77,12 +59,6 @@ class Export
 
     /**
      * Build the CSV from a builder instance.
-     *
-     * @param \Illuminate\Database\Eloquent\Builder $builder
-     * @param array $fields
-     * @param array $config
-     * @return $this
-     * @throws \League\Csv\CannotInsertRecord
      */
     public function buildFromBuilder(Builder $builder, array $fields, array $config = []): self
     {
@@ -121,9 +97,6 @@ class Export
 
     /**
      * Set the callback.
-     *
-     * @param callable $callback
-     * @return $this
      */
     public function beforeEach(callable $callback): self
     {
@@ -134,9 +107,6 @@ class Export
 
     /**
      * Callback which is run before processsing each chunk.
-     *
-     * @param callable $callback
-     * @return $this
      */
     public function beforeEachChunk(callable $callback): self
     {
@@ -184,9 +154,6 @@ class Export
 
     /**
      * Get all the header fields for the current set of fields.
-     *
-     * @param array $fields
-     * @return array
      */
     private function getHeaderFields(array $fields): array
     {
@@ -195,11 +162,6 @@ class Export
 
     /**
      * Add rows to the CSV.
-     *
-     * @param Writer $writer
-     * @param array $fields
-     * @param \Illuminate\Support\Collection $collection
-     * @throws \League\Csv\CannotInsertRecord
      */
     private function addCsvRows(Writer $writer, array $fields, Collection $collection): void
     {
@@ -230,10 +192,6 @@ class Export
 
     /**
      * Adds a header row to the CSV.
-     *
-     * @param Writer $writer
-     * @param array $headers
-     * @return void
      */
     private function addHeader(Writer $writer, array $headers): void
     {

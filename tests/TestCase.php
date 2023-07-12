@@ -14,10 +14,10 @@ class TestCase extends PhpunitTestCase
     {
         $capsule = new Capsule();
 
-        $capsule->addConnection(array(
+        $capsule->addConnection([
             'driver' => 'sqlite',
             'database' => ':memory:',
-        ));
+        ]);
         $capsule->setAsGlobal();
         $capsule->bootEloquent();
 
