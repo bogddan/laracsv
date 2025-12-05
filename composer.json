@@ -18,7 +18,7 @@
   ],
   "require": {
     "php": "^8.2",
-    "illuminate/database": "^10.0",
+    "illuminate/database": "^10 || ^11 || ^12",
     "league/csv": "^9.9"
   },
   "require-dev": {
